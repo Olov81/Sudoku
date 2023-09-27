@@ -1,0 +1,85 @@
+html,
+body {
+  padding: ;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.sudokuboard {
+  z-index: 0;
+  position: absolute;
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-align: center;
+  width: 27em;
+  height: 27em;
+}
+
+.sudokuboard td {
+  padding: 0;
+  border: 0.05em solid lightgray;
+  vertical-align: middle;
+}
+
+.sudokuboard tr {
+  height: 11%;
+}
+
+.sudokugroups {
+  pointer-events: none;
+  z-index: 1;
+  position: relative;
+  border: 0.05em solid black;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 27em;
+}
+
+.sudokugroups tr {
+  height: 9em;
+}
+
+.sudokugroups td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.cell,
+.hightlightedCell {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column-reverse;
+}
+
+.hightlightedCell {
+  background-color: lightblue;
+}
+
+.candidates {
+  border-collapse: collapse;
+  user-select: none;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.candidates td {
+  text-align: center;
+  font-size: x-small;
+  border-collapse: collapse;
+  border: 0;
+}
+
+.selected-candidate {
+  font-weight: bold;
+}
